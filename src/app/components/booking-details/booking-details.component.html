@@ -1,0 +1,45 @@
+<div class="container mt-3">
+    <div class="row">
+        <div class="col">
+            <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" matSort>
+                <ng-container matColumnDef="sr_no">
+                    <th mat-header-cell *matHeaderCellDef> Sr.No. </th>
+                    <td mat-cell *matCellDef="let element; let i = index"> {{i+1}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="name">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="mobileNo1">
+                    <th mat-header-cell *matHeaderCellDef> Mobile No. </th>
+                    <td mat-cell *matCellDef="let element"> {{element.mobileNo1}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="userName">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> User Name </th>
+                    <td mat-cell *matCellDef="let element"> {{element.userName}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="district">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> District</th>
+                    <td mat-cell *matCellDef="let element"> {{element.district}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="taluka">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Taluka </th>
+                    <td mat-cell *matCellDef="let element"> {{element.taluka}} </td>
+                </ng-container>
+    
+                <ng-container matColumnDef="village">
+                    <th mat-header-cell *matHeaderCellDef mat-sort-header> Village </th>
+                    <td mat-cell *matCellDef="let element"> {{element.village}} </td>
+                </ng-container>
+    
+                <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+            </table>
+        </div>
+    </div>
+</div>
